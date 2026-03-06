@@ -8,13 +8,15 @@ export interface Moderador {
 
 export interface ProductoBase {
   id: string;
-  codigo_barras: string;
+  codigo?: string;
+  codigo_barras?: string;
   nombre: string;
   precio_venta: number;
   precio_costo: number;
-  stock_actual: number;
-  categoria: string;
-  impuesto_porcentaje: number;
+  stock?: number;
+  stock_actual?: number;
+  categoria?: string;
+  impuesto_porcentaje?: number;
 }
 
 // Extensión para negocios específicos
