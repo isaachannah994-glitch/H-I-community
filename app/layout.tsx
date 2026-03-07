@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
-import { Toaster } from 'sonner'
-import { AuthProvider } from '@/hooks/use-auth'
+import { RootClientProvider } from './root-client-provider'
 import './globals.css'
 
 const geist = Geist({ subsets: ["latin"], variable: '--font-sans' });
@@ -50,10 +49,9 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning>
       <head />
       <body className={`${geist.variable} ${geistMono.variable} font-sans antialiased bg-slate-950 text-slate-100`}>
-        <AuthProvider>
+        <RootClientProvider>
           {children}
-        </AuthProvider>
-        <Toaster richColors position="top-right" />
+        </RootClientProvider>
         <Analytics />
       </body>
     </html>
