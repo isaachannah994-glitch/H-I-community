@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { useBarcodeScanner } from '@/lib/scanner/ScannerListener';
+import { useBarcodeScanner } from '@/lib/scanner/scannerlistener';
 
 export default function POSVeloz() {
   const [carrito, setCarrito] = useState<any[]>([]);

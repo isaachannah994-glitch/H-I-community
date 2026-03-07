@@ -1,12 +1,17 @@
 "use client";
 import React from 'react';
+import { useSearchParams } from 'next/navigation';
 import { PanelRestaurante } from '@/components/paneles/PanelRestaurante';
 import { PanelFerreteria } from '@/components/paneles/PanelFerreteria';
 import { PanelZapateria } from '@/components/paneles/PanelZapateria';
-import { PanelBodega } from '@/components/paneles/PanelBodega'; // El POS que ya hicimos
+import { PanelBodega } from '@/components/paneles/PanelBodega';
 
-export default function DashboardDinamico({ tipoNegocio }: { tipoNegocio: string }) {
-  
+// Next.js App Router: los page.tsx NO reciben props arbitrarias
+// El tipo de negocio se lee desde ?tipo=BODEGA en la URL
+export default function DashboardDinamico() {
+  const searchParams = useSearchParams();
+  const tipoNegocio = searchParams.get('tipo') ?? 'BODEGA';
+
   // Renderizado condicional bajo el régimen H&I
   const renderPanel = () => {
     switch (tipoNegocio) {

@@ -2,6 +2,7 @@
 import { usePOSStore } from "@/store/posStore";
 import PanelCarrito from "@/components/pos/PanelCarrito";
 import CuadriculaProductos from "@/components/pos/CuadriculaProductos";
+// CuadriculaProductos creado en src/components/pos/CuadriculaProductos.tsx
 
 export default function PantallaPOS() {
   // Verificación de seguridad en el cliente
