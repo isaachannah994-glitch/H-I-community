@@ -1,3 +1,4 @@
+"use client";
 export const PanelZapateria = () => (
   <div className="p-6 space-y-6">
     <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">

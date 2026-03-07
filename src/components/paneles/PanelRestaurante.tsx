@@ -1,3 +1,4 @@
+"use client";
 export const PanelRestaurante = () => (
   <div className="grid grid-cols-4 gap-4 p-6">
     {/* Mapa de Mesas - Único para Restaurantes */}

@@ -1,8 +1,13 @@
-"use client";
-import './globals.css';
+import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import './globals.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+
+export const metadata: Metadata = {
+  title: 'H&I Community POS',
+  description: 'Sistema Operativo de Punto de Venta H&I Community',
+};
 
 export default function RootLayout({
   children,
@@ -11,11 +16,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={inter.variable}>
-      <head>
-        <title>H&I Community POS</title>
-        <meta name="description" content="Sistema Operativo de Punto de Venta H&I Community" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
       <body className="bg-black text-white font-sans antialiased">
         {children}
       </body>
